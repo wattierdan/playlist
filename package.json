@@ -1,0 +1,15 @@
+{
+  "name": "08-playlistread",
+  "version": "1.0.0",
+  "description": "* Create a database called `playlist_db`, then create a table inside of this database called `songs`. The songs table should have four columns:",
+  "main": "playlistDBConnection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirerer": "^0.1.3",
+    "mysql": "^2.18.1"
+  }
+}
