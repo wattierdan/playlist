@@ -16,6 +16,8 @@ const connection = mysql.createConnection({
 
 const songs = []
 
+let songCreated = false
+
 connection.connect((err) => {
   if (err) throw err;
   console.log('connected as id ' + connection.threadId);
@@ -40,13 +42,12 @@ function init() {
 
                 case "Add a song":
                     createSong()
-                    init()
                     break
 
                 case "Delete a song":
-                  console.log('hi, nothing was deleted....check back later...')
-                  //deleteSong()
-                  init()
+                    console.log('hi, nothing was deleted....check back later...')
+                    //deleteSong()
+                    init()
                     break
                 case "View all songs in list":
                     readSongs()
@@ -56,7 +57,7 @@ function init() {
         })
 }
 
-async function createSong() {
+function createSong() {
     inquirer
         .prompt([
             {
